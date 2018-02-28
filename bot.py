@@ -172,6 +172,6 @@ async def on_message(message):
 	    await client.send_message(message.channel, "A alias for `}>debug`, this command is a alias and not usuable.")
         
 try:
-    client.run(token)
+    client.run(os.getenv('Token'))
 except LoginFailure:
     print("invalid!")
